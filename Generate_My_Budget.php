@@ -11,9 +11,9 @@
     
 <?php
 
-echo "<PRE>";
-print_r($_POST);
-echo "</PRE>";
+//echo "<PRE>";
+//print_r($_POST);
+//echo "</PRE>";
 
 $rates = array(600, 400, 800, 1400, 300, 500, 100, 200);
 
@@ -103,19 +103,47 @@ switch ($quality) {
 $shootDays = $_POST[NumDays];
 
 switch ($shootDays) {
-    case $shootDays>=1:
-        $lineItem[Producer][Time]= $shootDays;
-        $lineItem[ProductionCoordinator][Time]= $shootDays;
-        $lineItem[Director][Time]= $shootDays;
-        $lineItem[Cameraperson][Time]= $shootDays;
-        $lineItem[AsstCameraperson][Time]= $shootDays;
-        $lineItem[Soundperson][Time]= $shootDays;
-        $lineItem[Grip][Time]= $shootDays;
-        $lineItem[PA][Time]= $shootDays;
-        $lineItem[Misc][Time]= $shootDays;
-        $lineItem[Prod_Post][Time]= $shootDays;
-        $lineItem[Editor][Time]= $shootDays;
-        $lineItem[GFX][Time]= $shootDays;
+    case $shootDays>="L":
+        $lineItem[Producer][Time]= 1;
+        $lineItem[ProductionCoordinator][Time]= 1;
+        $lineItem[Director][Time]= 1;
+        $lineItem[Cameraperson][Time]= 1;
+        $lineItem[AsstCameraperson][Time]= 1;
+        $lineItem[Soundperson][Time]= 1;
+        $lineItem[Grip][Time]= 1;
+        $lineItem[PA][Time]= 1;
+        $lineItem[Misc][Time]= 1;
+        $lineItem[Prod_Post][Time]= 1;
+        $lineItem[Editor][Time]= 1;
+        $lineItem[GFX][Time]= 1;
+        break;
+     case $shootDays>="M":
+        $lineItem[Producer][Time]= 2.5;
+        $lineItem[ProductionCoordinator][Time]= 2.5;
+        $lineItem[Director][Time]= 2.5;
+        $lineItem[Cameraperson][Time]= 2.5;
+        $lineItem[AsstCameraperson][Time]= 2.5;
+        $lineItem[Soundperson][Time]= 2.5;
+        $lineItem[Grip][Time]= 2.5;
+        $lineItem[PA][Time]= 2.5;
+        $lineItem[Misc][Time]= 2.5;
+        $lineItem[Prod_Post][Time]= 2.5;
+        $lineItem[Editor][Time]= 2.5;
+        $lineItem[GFX][Time]= 2.5;
+        break;
+     case $shootDays>="H":
+        $lineItem[Producer][Time]= 4.5;
+        $lineItem[ProductionCoordinator][Time]= 4.5;
+        $lineItem[Director][Time]= 4.5;
+        $lineItem[Cameraperson][Time]= 4.5;
+        $lineItem[AsstCameraperson][Time]= 4.5;
+        $lineItem[Soundperson][Time]= 4.5;
+        $lineItem[Grip][Time]= 4.5;
+        $lineItem[PA][Time]= 4.5;
+        $lineItem[Misc][Time]= 4.5;
+        $lineItem[Prod_Post][Time]= 4.5;
+        $lineItem[Editor][Time]= 4.5;
+        $lineItem[GFX][Time]= 4.5;
         break;
     }
 
@@ -174,17 +202,17 @@ echo "</PRE>";
 
 
 
-echo "<table border= 1px>";
+//echo "<table border= 1px>";
 
 $budgetTotal = array();
 
 foreach ($lineItem as $key => $subarray) {
     
-        echo "<tr>";
-        echo "<td width = 100 px > $key </td>";
-        echo "<td width = 100 px > $subarray[Units] </td>";
-        echo "<td width = 100 px > $subarray[Time] </td>";
-        echo "<td width = 100 px > $subarray[Rate] </td>";
+        //echo "<tr>";
+        //echo "<td width = 100 px > $key </td>";
+        //echo "<td width = 100 px > $subarray[Units] </td>";
+        //echo "<td width = 100 px > $subarray[Time] </td>";
+        //echo "<td width = 100 px > $subarray[Rate] </td>";
 
         $lineTotal = $subarray[Units] * $subarray[Time] * $subarray[Rate];
         
@@ -192,59 +220,60 @@ foreach ($lineItem as $key => $subarray) {
         array_push($budgetTotal, $lineTotal);
         //$x++;
         
-        echo "<td> $lineTotal </td>";
-        echo "</tr>";
+        //echo "<td> $lineTotal </td>";
+        //echo "</tr>";
 
    }
    
 foreach ($Options as $key => $subarray) {
     
-        echo "<tr>";
-        echo "<td width = 100 px > $key </td>";
-        echo "<td width = 100 px > $subarray[Units] </td>";
-        echo "<td width = 100 px > $subarray[Time] </td>";
-        echo "<td width = 100 px > $subarray[Rate] </td>";
+        //echo "<tr>";
+        //echo "<td width = 100 px > $key </td>";
+        //echo "<td width = 100 px > $subarray[Units] </td>";
+        //echo "<td width = 100 px > $subarray[Time] </td>";
+        //echo "<td width = 100 px > $subarray[Rate] </td>";
 
         $lineTotal = $subarray[Units] * $subarray[Time] * $subarray[Rate];
         
         array_push($budgetTotal, $lineTotal);
         
-        echo "<td> $lineTotal </td>";
-        echo "</tr>";
+        //echo "<td> $lineTotal </td>";
+        //echo "</tr>";
         
    }
 
 
 foreach ($Constants as $key => $subarray) {
     
-        echo "<tr>";
-        echo "<td width = 100 px > $key </td>";
-        echo "<td width = 100 px > $subarray[Units] </td>";
-        echo "<td width = 100 px > $subarray[Time] </td>";
-        echo "<td width = 100 px > $subarray[Rate] </td>";
+        //echo "<tr>";
+        //echo "<td width = 100 px > $key </td>";
+        //echo "<td width = 100 px > $subarray[Units] </td>";
+        //echo "<td width = 100 px > $subarray[Time] </td>";
+        //echo "<td width = 100 px > $subarray[Rate] </td>";
 
         $lineTotal = $subarray[Units] * $subarray[Time] * $subarray[Rate];
         
         array_push($budgetTotal, $lineTotal);
         
-        echo "<td> $lineTotal </td>";
-        echo "</tr>";
+        //echo "<td> $lineTotal </td>";
+        //echo "</tr>";
         
    }       
 
-echo "</table>";
+//echo "</table>";
        
         
-echo "<PRE>";
-print_r($budgetTotal);
-echo "</PRE>";
+//echo "<PRE>";
+//print_r($budgetTotal);
+//echo "</PRE>";
 
 $grandTotal = array_sum($budgetTotal);
-echo $grandTotal;
+//echo $grandTotal;
 
-echo "<p> $ " . $grandTotal . ".00 </p>";
 
-echo "<p> what is not working here </p>";
+echo "<p>Your video will cost approximately $ " . $grandTotal . ".00 </p>";
+
+echo "<p> For a full printable version of your budget, please give us your email address: </p>";
 
 ?>
         

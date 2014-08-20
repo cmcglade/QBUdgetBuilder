@@ -12,7 +12,7 @@
     <p>One of the first questions that we get asked is how much does a video cost.</br>
     Well, we would like to give you a ball park estimate. But first, we need to ask you a few questions.</p>
 
-<p>1) What quality level are you expecting:</p>
+<p>1) What quality level are you expecting?</p>
 
 
 <p><INPUT TYPE = "radio" NAME = "Quality" VALUE = "H"> I would like this to look and sound like a commercial</p>
@@ -20,7 +20,10 @@
 <p><INPUT TYPE = "radio" NAME = "Quality" VALUE = "L"> I'm thinking of something that looks more like a YouTube video</p>
 
 <p>2) How many days of shooting do you see?
-<INPUT TYPE = "text" NAME = "NumDays" SIZE = 4> Days</p>
+<INPUT TYPE = "RADIO" NAME = "NumDays" VALUE = "L"> 1 Day
+<INPUT TYPE = "RADIO" NAME = "NumDays" VALUE = "M"> 2 - 3 Days
+<INPUT TYPE = "RADIO" NAME = "NumDays" VALUE = "H"> 4 - 5 Days
+</p>
 
 <p>3) Will our subjects need make-up?
 <INPUT TYPE = "RADIO" NAME = "Makeup" VALUE = "Yes">Yes
@@ -37,7 +40,7 @@
 <p><INPUT TYPE = "radio" NAME = "Graphics" VALUE = "Basic">  Just a few basic name titles</p>
 <p><INPUT TYPE = "radio" NAME = "Graphics" VALUE = "Some"> I think that we'll need a fair number of support graphics</p>
 <p><INPUT TYPE = "radio" NAME = "Graphics" VALUE = "Pro">  I think this project needs a very professional graphic look</p>
-<p><INPUT TYPE = "radio" NAME = "Graphics" VALUE = "Animation">  I think this project needs a very professional graphic look</p>
+<p><INPUT TYPE = "radio" NAME = "Graphics" VALUE = "Animation">  I think this project needs animation</p>
 
 <p><INPUT TYPE = "SUBMIT" VALUE = "Generate My Budget"></p>
 
