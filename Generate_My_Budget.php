@@ -116,6 +116,8 @@ switch ($shootDays) {
         $lineItem[Prod_Post][Time]= 1;
         $lineItem[Editor][Time]= 1;
         $lineItem[GFX][Time]= 1;
+        $Options[MakeUp][Time] = 1;
+        $Options[Teleprompter][Time] = 1;
         break;
      case $shootDays>="M":
         $lineItem[Producer][Time]= 2.5;
@@ -130,6 +132,8 @@ switch ($shootDays) {
         $lineItem[Prod_Post][Time]= 2.5;
         $lineItem[Editor][Time]= 2.5;
         $lineItem[GFX][Time]= 2.5;
+        $Options[MakeUp][Time] = 2.5;
+        $Options[Teleprompter][Time] = 2.5;
         break;
      case $shootDays>="H":
         $lineItem[Producer][Time]= 4.5;
@@ -144,6 +148,8 @@ switch ($shootDays) {
         $lineItem[Prod_Post][Time]= 4.5;
         $lineItem[Editor][Time]= 4.5;
         $lineItem[GFX][Time]= 4.5;
+        $Options[MakeUp][Time] = 4.5;
+        $Options[Teleprompter][Time] = 4.5;
         break;
     }
 
@@ -153,7 +159,6 @@ $Makeup = $_POST[Makeup];
 switch($Makeup) {
     case "Yes":
         $Options[MakeUp][Units] = 1;
-        $Options[MakeUp][Time] = $shootDays;
         break;
 };
 
@@ -162,7 +167,6 @@ $Teleprompt = $_POST[Prompter];
 switch ($Teleprompt) {
     case "Yes":
         $Options[Teleprompter][Units] = 1;
-        $Options[Teleprompter][Time] = $shootDays;
         break;
 };
 

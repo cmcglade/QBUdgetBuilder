@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    <FORM ACTION = "Generate_My_Budget.php" METHOD = POST>
+    <FORM ACTION = "Generate_My_Budget2.php" METHOD = POST>
     <p>So, you would like to produce a video.</p>
     <p>One of the first questions that we get asked is how much does a video cost.</br>
     Well, we would like to give you a ball park estimate. But first, we need to ask you a few questions.</p>
